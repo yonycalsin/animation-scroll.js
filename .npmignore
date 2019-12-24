@@ -1,0 +1,14 @@
+/docs
+/node_modules
+/package-lock.json
+/src
+/web
+.vscode
+.prettierrc
+.npmrc
+tsconfig.json
+webpack.config.js
+webpack.development.config.js
+webpack.production.config.js
+tslint.json
+index.html
