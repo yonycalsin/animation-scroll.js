@@ -3,7 +3,10 @@
    "version": "1.0.0",
    "description": "🎁 Modern scroll animation 🎂 and very easy to use! 😉",
    "main": "dist/index.js",
-   "scripts": {},
+   "scripts": {
+      "start": "webpack --config webpack.dev.js",
+      "build": "webpack --config webpack.prod.js"
+   },
    "repository": {
       "type": "git",
       "url": "git+https://github.com/yonicb/animation-scroll.js.git"
@@ -27,6 +30,8 @@
       "tslint": "^5.20.1",
       "typescript": "^3.7.4",
       "webpack": "^4.41.4",
-      "webpack-cli": "^3.3.10"
+      "webpack-cli": "^3.3.10",
+      "webpack-dev-server": "^3.10.1",
+      "webpack-merge": "^4.2.2"
    }
 }
