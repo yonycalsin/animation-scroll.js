@@ -1,11 +1,12 @@
 {
    "name": "animation-scroll.js",
-   "version": "1.0.0",
+   "version": "1.0.3",
    "description": "🎁 Modern scroll animation 🎂 and very easy to use! 😉",
    "main": "dist/index.js",
    "scripts": {
-      "start": "webpack --config webpack.dev.js",
-      "build": "webpack --config webpack.prod.js"
+      "start": "yarn prebuild && webpack --config webpack.dev.js",
+      "build": "yarn prebuild && webpack --config webpack.prod.js",
+      "prebuild": "rimraf dist"
    },
    "repository": {
       "type": "git",
@@ -26,6 +27,8 @@
    },
    "homepage": "https://github.com/yonicb/animation-scroll.js#readme",
    "devDependencies": {
+      "@types/node": "^13.1.0",
+      "rimraf": "^3.0.0",
       "ts-loader": "^6.2.1",
       "tslint": "^5.20.1",
       "typescript": "^3.7.4",
