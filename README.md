@@ -46,7 +46,7 @@ Or you could also use it using a cdn provided by unpkg.com, as shown below!
 </p>
 
 ``` html
-<script src="https://unpkg.com/animation-scroll.js@1.0.3/dist/index.js"></script>
+<script src="https://unpkg.com/animation-scroll.js@1.0.4/dist/index.js"></script>
 ```
 
 <!-- ## Getting started -->
