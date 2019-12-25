@@ -1,19 +1,12 @@
 {
    "compilerOptions": {
-      "lib": [
-         "es2017",
-         "dom",
-         "dom.iterable",
-         "es6",
-         "scripthost"
-      ],
       "module": "commonjs",
       "declaration": true,
       "removeComments": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "target": "es2017",
-      "sourceMap": true,
+      "target": "es5",
+      "sourceMap": false,
       "outDir": "./dist",
       "baseUrl": "./src",
       "incremental": true,
