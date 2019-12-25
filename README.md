@@ -1,14 +1,12 @@
 <p align="center">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://github.com/yonicb/animation-scroll.js" target="blank"><img src="https://i.ibb.co/HPCbW6q/animation-scroll-js.png" width="120" alt="Animation-scroll.js Logo" /></a>
 </p>
 
 <p align="center">
-🎨 Animation-scroll.js 🌐 is a scss library, which adds modern colors.
+🎨 Animation-scroll.js 🌐 is a javascript library that features scroll functionality with modern animation.
 </p>
 <p align="center" style="max-width: 450px; margin: auto;">
+   <a href="https://github.com/yonicb/animation-scroll.js"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square" /></a>
    <a href="https://github.com/yonicb/animation-scroll.js"><img src="https://img.shields.io/spiget/stars/1000?color=brightgreen&label=Star&logo=github" /></a>
    <a href="https://www.npmjs.com/animation-scroll.js" target="_blank">
    <img src="https://img.shields.io/npm/v/animation-scroll.js" alt="NPM Version" /></a>
@@ -28,13 +26,12 @@
 ## 🌐 Description
 
 <p>
-Under the hood, animation-scroll.js uses scss/sass, but also provides compatibility with a wide range of other libraries, such as Eg ReactJs, Vuejs, Angular, which allows easy use of the countless third-party add-ons that are available!
+Under the hood, animation-scroll.js uses javascript, but also provides compatibility with a wide range of other libraries, such as Eg ReactJs, Vuejs, Angular, which allows the easy use of countless third-party add-ons that are available!
 </p>
-
 
 ## 📦 Installation
 <p>
-To start using Animation-scroll.js you need to install it with the package manager npm or yarn, as shown in the next section or download it directly!
+To start using animation-scroll.js, you must install it with the npm or yarn package manager, as shown in the next section, or download it directly!
 </p>
 
 ``` properties
@@ -44,24 +41,61 @@ npm install animation-scroll.js -S
 // To install using yarn
 yarn add animation-scroll.js
 ```
+<p>
+Or you could also use it using a cdn provided by unpkg.com, as shown below!
+</p>
+
+``` html
+<script src="https://unpkg.com/animation-scroll.js@1.0.3/dist/index.js"></script>
+```
 
 <!-- ## Getting started -->
 ## ▶️ Getting started
 <p>
-To use the beautiful colors of animation-scroll.js is very simple, first we will import the colors.scss file that contains the colors. Example:
+To use the beautiful animation animation-scroll.js is very simple, first we will import the index.js file that contains the code. Example:
 </p>
 
-```scss
+```js
 // If you use nodejs, reajs, vuejs or angular
-@import "animation-scroll.js/src/colors.scss";
+const animationScrollJs = require("animation-scroll.js");
 
-// You can also download it directly and import the file colors.scss, as follows
-@import "src/colors.scss";
+// If you use ES6+
+import animationScrollJs from "animation-scroll.js";
 ```
 <p>
-As you can see we already import correctly!
-Sass-Colors includes a function that adds selection a color and its secondary color, for example:
+As you can see, we already import correctly! Animation-scroll.js, for example:
 </p>
+
+```js
+/**
+ * @Param container: number | element
+ * @Param duration: number
+ * @Param callback: function
+ * */
+new AnimationScrollJs(500, 1000, (e) => {
+   console.log('Scroll done!');
+});
+```
+
+<p>
+Tambien puedes ejecutar el scroll sobre un contenedor perzonalizado
+</p>
+
+```js
+/**
+ * @Param container: number | element
+ * @Param duration: number
+ * @Param callback: function
+ * */
+
+let container = document.getElementById('chat-container');
+let duration = 1000;
+var callback = function () {
+   console.log('Scroll done!');
+}
+new AnimationScrollJs(container, duration, callback);
+```
+
 
 ## ⭐ Support for
 
@@ -76,16 +110,22 @@ Animation-scroll.js is an open source project licensed by [MIT](LICENSE). You ca
 ## 📜 License
 
 Animation-scroll.js is [MIT licensed](LICENSE).
+
 ## Contributors ✨
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://twitter.com/yonicalsin"><img src="https://avatars0.githubusercontent.com/u/58490737?v=4" width="60px;" alt=""/><br /><sub><b>Yoni Calsin</b></sub></a><br /><a href="https://github.com/animation-scroll.js/animation-scroll.js/commits?author=yonicb" title="Code">💻</a></td>
+    <td align="center"><a href="https://twitter.com/yonicalsin"><img src="https://avatars0.githubusercontent.com/u/58490737?v=4" width="60px;" alt=""/><br /><sub><b>Yoni Calsin</b></sub></a><br /><a href="https://github.com/animation-scroll.js/animation-scroll.js/commits?author=yonicb" title="Code">💻</a> <a href="#maintenance-yonicb" title="Maintenance">🚧</a> <a href="#ideas-yonicb" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-yonicb" title="Design">🎨</a> <a href="https://github.com/animation-scroll.js/animation-scroll.js/commits?author=yonicb" title="Documentation">📖</a></td>
   </tr>
 </table>
 
