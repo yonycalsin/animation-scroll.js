@@ -22,6 +22,8 @@
    <img src="https://img.shields.io/twitter/follow/yonicalsin.svg?style=social&label=Follow"></a>
 </p>
 
+## 🎉 Demo
+Preview live [Click Here](https://yonicb.github.io/animation-scroll.js)
 
 ## 🌐 Description
 
