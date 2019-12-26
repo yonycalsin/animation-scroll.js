@@ -10,11 +10,21 @@ html, body {
    font-family: "Segoe Ui", sans-serif;
 }
 .container {
+   position: relative;
    max-width: 90%;
-   margin: auto;
+   margin: auto
+}
+
+@media (min-width: 800px) {
+   .container {
+       max-width:70%;
+   }
 }
 .flow-text {
    font-size: 24px;
+}
+a {
+   display: inline-block;
 }
 img {
    width: 100%;
@@ -22,6 +32,8 @@ img {
 }
 h1, h2, h3, h4, h5, h6 {
    font-weight: 400;
+}
+h1 {
    font-size: 5vmin;
 }
 .tac {
@@ -57,10 +69,50 @@ pre {
    border: 1px solid #eee;
    font-size: 15px;
    overflow: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
 pre code {
    margin-left: 40px;
+}
+
+.fadeIn, .fadeInDown, .fadeInUp {
+   animation-fill-mode: both !important;
+}
+.fadeIn {
+   animation: fadeIn .5s ease-in-out;
+}
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+}
+.fadeInDown {
+   animation: fadeInDown .5s ease-in-out;
+}
+@keyframes fadeInDown {
+   from {
+      transform: translateY(-100%);
+   }
+}
+.fadeInUp, p {
+   animation: fadeInUp .5s ease-in-out;
+}
+@keyframes fadeInUp {
+   from {
+      opacity: 0;
+      transform: translateY(100%);
+   }
+}
+.badges {
+   max-width: 450px;
+   margin: auto;
+   text-align: center;
+}
+.badges img {
+   width: auto;
+}
+.socials {
+   text-align: center;
+}
+.socials img {
+   width: 30px;
 }
