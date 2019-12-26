@@ -1,18 +1,14 @@
 /*!
- * Animation Scroll Js v1.0.6 (https://github.com/yonicb/animation-scroll.js)
+ * Animation Scroll Js v1.0.7 (https://github.com/yonicb/animation-scroll.js)
  * Copyright 2019 The Animation Scroll Js Authors
  * Copyright 2019 Yoni Calsin <@yonicb>.
  * Licensed under MIT (https://github.com/yonicb/animation-scroll.js/blob/master/LICENSE)
  */
-interface WindowScroll extends Window {
-   requestAnimationFrame: any;
+interface Window {
    mozRequestAnimationFrame: any;
-   webkitRequestAnimationFrame: any;
    msRequestAnimationFrame: any;
    oRequestAnimationFrame: any;
-   AnimationScrollJs: any;
 }
-declare var window: WindowScroll & typeof globalThis;
 
 class AnimationScrollJs {
    private _rAF: Function = window.requestAnimationFrame ||
@@ -60,7 +56,7 @@ class AnimationScrollJs {
          return (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
       }
    }
-   private getPosition = (start: number, end: number, elapsed: number, duration: number) => {
+   private getPosition = (start: number, end: number, elapsed: number, duration: number): number => {
       if (elapsed > duration) {
          return end;
       }
@@ -72,7 +68,5 @@ if (typeof exports !== 'undefined') {
    if (typeof module !== 'undefined' && module.exports) {
       exports = module.exports = AnimationScrollJs;
    }
-   exports.Wavescrollbar = AnimationScrollJs;
+   exports.AnimationScrollJs = AnimationScrollJs;
 }
-window.AnimationScrollJs = AnimationScrollJs;
-export default AnimationScrollJs;
