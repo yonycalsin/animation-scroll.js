@@ -1,0 +1,65 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+html, body {
+   margin: 0;
+   padding: 0;
+   color: #444;
+   font-weight: 400;
+   font-family: "Segoe Ui", sans-serif;
+}
+.container {
+   max-width: 90%;
+   margin: auto;
+}
+.flow-text {
+   font-size: 24px;
+}
+img {
+   width: 100%;
+   display: inline-block;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-weight: 400;
+   font-size: 5vmin;
+}
+.tac {
+   text-align: center;
+}
+.btn {
+   padding: 7px 9px;
+   background: red;
+   border: 0;
+   outline: none;
+   border-radius: 4px;
+   background: transparent;
+   cursor: pointer;
+}
+.btn-down {
+   width: 70px;
+   height: 70px;
+   padding: 20px;
+   border: 2px solid #ddd;
+   border-radius: 50%;
+   animation: btnDown .8s ease-in-out infinite alternate;
+}
+
+@keyframes btnDown {
+   from {
+      transform: translateY(-50%);
+   }
+}
+pre {
+   background: #fafafa;
+   border-radius: 10px;
+   padding: 15px;
+   border: 1px solid #eee;
+   font-size: 15px;
+   overflow: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+pre code {
+   margin-left: 40px;
+}
