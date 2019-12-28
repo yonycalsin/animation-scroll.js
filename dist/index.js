@@ -1,7 +1,63 @@
-/*!
- * Animation Scroll Js v1.0.12 (https://github.com/yonicb/animation-scroll.js)
- * Copyright 2019 The Animation Scroll Js Authors
- * Copyright 2019 Yoni Calsin <@yonicb>.
- * Licensed under MIT (https://github.com/yonicb/animation-scroll.js/blob/master/LICENSE)
- */
-"use strict";var AnimationScrollJs=function(){return function(t,n,e,o){var i=this;void 0===o&&(o=!1),this._rAF=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame||window.oRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60)},this.getTop=function(t,n){return"HTML"===t.nodeName?-n:t.getBoundingClientRect().top+n},this.easeInOut=function(t){return t<.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1},this.getPosition=function(t,n,e,o){return e>o?n:t+(n-t)*i.easeInOut(e/o)},this._rAF=this._rAF?this._rAF.bind(window):null,n=n||500;var r=(o=o||window).scrollTop||window.pageYOffset,s="number"==typeof t?parseInt(""+t,void 0):this.getTop(t,r),u=(new Date).getTime(),a=function(){var w=(new Date).getTime()-u;o!==window?o.scrollTop=i.getPosition(r,s,w,n):window.scroll(0,i.getPosition(r,s,w,n)),w>n?"function"==typeof e&&e(t):i._rAF(a)};a()}}();"undefined"!=typeof exports&&("undefined"!=typeof module&&module.exports&&(exports=module.exports=AnimationScrollJs),exports.AnimationScrollJs=AnimationScrollJs);
+"use strict";
+var AnimationScrollJs = (function () {
+    function AnimationScrollJs(el, duration, callback, context) {
+        var _this = this;
+        if (context === void 0) { context = false; }
+        this._rAF = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame || function (callback) { window.setTimeout(callback, 1000 / 60); };
+        this.getTop = function (el, start) {
+            if (el.nodeName === 'HTML') {
+                return -start;
+            }
+            return el.getBoundingClientRect().top + start;
+        };
+        this.easeInOut = function (t) {
+            if (t < .5) {
+                return 4 * t * t * t;
+            }
+            else {
+                return (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            }
+        };
+        this.getPosition = function (start, end, elapsed, duration) {
+            if (elapsed > duration) {
+                return end;
+            }
+            return start + (end - start) * _this.easeInOut(elapsed / duration);
+        };
+        this._rAF = this._rAF ? this._rAF.bind(window) : null;
+        duration = duration || 500;
+        context = context || window;
+        var start = context.scrollTop || window.pageYOffset;
+        var end = typeof el === 'number' ? parseInt("" + el, undefined) : this.getTop(el, start);
+        var clock = new Date().getTime();
+        var step = function () {
+            var elapsed = new Date().getTime() - clock;
+            if (context !== window) {
+                context.scrollTop = _this.getPosition(start, end, elapsed, duration);
+            }
+            else {
+                window.scroll(0, _this.getPosition(start, end, elapsed, duration));
+            }
+            if (elapsed > duration) {
+                if (typeof callback === 'function') {
+                    callback(el);
+                }
+            }
+            else {
+                _this._rAF(step);
+            }
+        };
+        step();
+    }
+    return AnimationScrollJs;
+}());
+if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+        exports = module.exports = AnimationScrollJs;
+    }
+    exports.AnimationScrollJs = AnimationScrollJs;
+}

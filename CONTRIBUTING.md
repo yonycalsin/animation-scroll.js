@@ -6,7 +6,7 @@ As the creators and maintainers of this project, we want to ensure that `animati
 
 Here is a quick guide to doing code contributions to the library.
 
-1. Fork and clone the repo to your local machine `git clone https://github.com/YOUR_NAME/animation-scroll.js.git`
+<!-- 1. Fork and clone the repo to your local machine `git clone https://github.com/YOUR_NAME/animation-scroll.js.git`
 
 2. Create a new branch from `master` with a meaningful name for a new feature or an issue you want to work on: `git checkout -b your-branch-name`
 
@@ -36,7 +36,7 @@ Here is a quick guide to doing code contributions to the library.
 
 10. Submit a pull request to the upstream animation-scroll.js repository.
 
-11. Choose a descriptive title and describe your changes briefly.
+11. Choose a descriptive title and describe your changes briefly. -->
 
 ## Coding style
 
