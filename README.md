@@ -22,6 +22,14 @@
    <img src="https://img.shields.io/twitter/follow/yonicalsin.svg?style=social&label=Follow"></a>
 </p>
 
+- [🎉 Demo](#🎉-Demo)
+- [🌐 Description](#🌐-Description)
+- [📦 Installation](#📦-Installation)
+- [▶️ Getting started](#▶️-getting-started)
+- [⭐ Support for](#⭐-support-for)
+- [✨ Contributors](#✨-Contributors)
+- [📜 License](#📜-License)
+
 ## 🎉 Demo
 Preview live [Click Here](https://yonicb.github.io/animation-scroll.js)
 
@@ -109,11 +117,7 @@ Animation-scroll.js is an open source project licensed by [MIT](LICENSE). You ca
 * Author [Yoni Calsin](https://github.com/yonicb)
 * Twitter [Yoni Calsin](https://twitter.com/yonicalsin)
 
-## 📜 License
-
-Animation-scroll.js is [MIT licensed](LICENSE).
-
-## Contributors ✨
+## ✨ Contributors
 [Contribute to the project](CONTRIBUTING.md)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -137,3 +141,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## 📜 License
+
+Animation-scroll.js is [MIT licensed](LICENSE).
