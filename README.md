@@ -66,10 +66,10 @@ To use the beautiful animation animation-scroll.js is very simple, first we will
 </p>
 
 ```js
-// If you use nodejs, reajs, vuejs or angular
+// If you use ES5-
 const animationScrollJs = require("animation-scroll.js");
 
-// If you use ES6+
+// If you use ES6+ or Typescript
 import animationScrollJs from "animation-scroll.js";
 ```
 <p>
