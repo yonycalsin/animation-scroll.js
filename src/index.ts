@@ -16,7 +16,7 @@ class AnimationScrollJs {
       window.webkitRequestAnimationFrame ||
       window.msRequestAnimationFrame ||
       window.oRequestAnimationFrame || function (callback: Function) { window.setTimeout(callback, 1000 / 60); };
-   constructor(el: any, duration: number, callback: Function, context: any = false) {
+   constructor(el: any, duration: number, callback?: Function, context: any = false) {
       this._rAF = this._rAF ? this._rAF.bind(window) : null;
       duration = duration || 500;
       context = context || window;
