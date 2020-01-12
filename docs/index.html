@@ -47,16 +47,16 @@
 
       <pre class="fadeInUp">
          <code>
-               function goUp() {
-                  new AnimationScrollJs(document.body, 1000, (e) => {
-                     console.log(e);
-                  });
-               }
-               function goDown() {
-                  new AnimationScrollJs(document.body.clientHeight, 1000, (e) => {
-                     console.log(e);
-                  });
-               }
+            function goUp() {
+               new AnimationScrollJs(document.body, 1500, (e) => {
+                  console.log("Go up done !");
+               });
+            }
+            function goDown() {
+               new AnimationScrollJs(document.body.clientHeight, 1500, (e) => {
+                  console.log("Go down done !");
+               });
+            }
          </code>
       </pre>
       <p class="flow-text tac">Author's social networks</p>
@@ -209,7 +209,7 @@
          &copy; All right reserved 2019 - Yoni Calsin
       </p>
    </div>
-   <script src="https://unpkg.com/animation-scroll.js@1.0.12/dist/index.js"></script>
+   <script src="https://unpkg.com/animation-scroll.js@1.0.13/dist/index.js"></script>
    <script>
       function goUp() {
          new AnimationScrollJs(document.body, 1500, (e) => {

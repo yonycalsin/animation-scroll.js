@@ -1,6 +1,6 @@
 {
    "name": "animation-scroll.js",
-   "version": "1.0.12",
+   "version": "1.0.13",
    "description": "🎁 Modern scroll animation 🎂 and very easy to use! 😉",
    "main": "dist/index.js",
    "types": "index.d.ts",
