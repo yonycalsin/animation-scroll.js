@@ -1,8 +1,8 @@
 /*!
- * Animation Scroll Js v1.0.13 (https://github.com/yonicb/animation-scroll.js)
+ * Animation Scroll Js v1.0.13 (https://github.com/yoicalsin/animation-scroll.js)
  * Copyright 2019 The Animation Scroll Js Authors
- * Copyright 2019 Yoni Calsin <@yonicb>.
- * Licensed under MIT (https://github.com/yonicb/animation-scroll.js/blob/master/LICENSE)
+ * Copyright 2019 Yoni Calsin <@yoicalsin>.
+ * Licensed under MIT (https://github.com/yoicalsin/animation-scroll.js/blob/master/LICENSE)
  */
 interface Window {
    mozRequestAnimationFrame: any;
@@ -11,18 +11,30 @@ interface Window {
 }
 
 class AnimationScrollJs {
-   private _rAF: Function = window.requestAnimationFrame ||
+   private _rAF: Function =
+      window.requestAnimationFrame ||
       window.mozRequestAnimationFrame ||
       window.webkitRequestAnimationFrame ||
       window.msRequestAnimationFrame ||
-      window.oRequestAnimationFrame || function (callback: Function) { window.setTimeout(callback, 1000 / 60); };
-   constructor(el: any, duration: number, callback?: Function, context: any = false) {
+      window.oRequestAnimationFrame ||
+      function (callback: Function) {
+         window.setTimeout(callback, 1000 / 60);
+      };
+   constructor(
+      el: any,
+      duration: number,
+      callback?: Function,
+      context: any = false,
+   ) {
       this._rAF = this._rAF ? this._rAF.bind(window) : null;
       duration = duration || 500;
       context = context || window;
 
       const start = context.scrollTop || window.pageYOffset;
-      const end = typeof el === 'number' ? parseInt(`${el}`, undefined) : this.getTop(el, start);
+      const end =
+         typeof el === 'number'
+            ? parseInt(`${el}`, undefined)
+            : this.getTop(el, start);
 
       const clock = new Date().getTime();
 
@@ -43,26 +55,32 @@ class AnimationScrollJs {
          }
       };
       step();
-
    }
    private getTop = (el: any, start: any) => {
-      if (el.nodeName === 'HTML') { return -start; }
+      if (el.nodeName === 'HTML') {
+         return -start;
+      }
       return el.getBoundingClientRect().top + start;
-   }
+   };
    private easeInOut = (t: number): number => {
-      if (t < .5) {
+      if (t < 0.5) {
          return 4 * t * t * t;
       } else {
          return (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
       }
-   }
-   private getPosition = (start: number, end: number, elapsed: number, duration: number): number => {
+   };
+   private getPosition = (
+      start: number,
+      end: number,
+      elapsed: number,
+      duration: number,
+   ): number => {
       if (elapsed > duration) {
          return end;
       }
       return start + (end - start) * this.easeInOut(elapsed / duration);
       // return start + (end - start) * (elapsed / duration); // linear
-   }
+   };
 }
 if (typeof exports !== 'undefined') {
    if (typeof module !== 'undefined' && module.exports) {
